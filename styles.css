@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%)) no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: .9rem;
+  color: hsl(238, 29%, 16%);
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  background-color: hsl(240, 5%, 91%);
+  border-radius: 1rem;
+  height: auto;
+  /* width: 65%; */
+  width: 58.5rem;
+}
+
+.section {
+  width: 50%;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+/* Entartaining container  */
+#pic-section {
+  position: relative;
+}
+
+.pic-container {
+  background: url(images/bg-pattern-desktop.svg) no-repeat;
+  background-size: auto 180%;
+  background-position: bottom 30% right -13%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#main-pic {
+  position: absolute;
+  right: 15%;
+  top: 15%;
+}
+
+#box {
+  position: absolute;
+  z-index: 5;
+  left: -20%;
+  top: 42%;
+}
+
+/* FAQ Section */
+#faq-section {
+  margin: 4rem 0 6rem;
+}
+
+.questions {
+  border-bottom: 1px solid hsla(240, 6%, 50%, 0.2);
+  width: 80%;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion:hover {
+  color: hsl(14, 88%, 65%);
+  cursor: pointer;
+}
+
+.accordion img {
+  margin-right: .5rem;
+}
+
+.mark {
+  transition: transform .25s ease-in-out;
+  transform: rotate(180deg);
+}
+
+.active {
+  font-weight: 700;
+}
+
+.panel {
+  display: none;
+  font-size: .75rem;
+  color: hsl(240, 6%, 50%);
+  width: 90%;
+}
+
+/* Media Queries */
+@media (max-width: 1000px) {
+  main {
+    flex-direction: column;
+    width: 20.5rem;
+  }
+
+  .section {
+    width: 100%;
+  }
+
+  /* Entartaining container */
+  .pic-container {
+    background: url(images/bg-pattern-mobile.svg) no-repeat;
+    background-position: top 0 right 50%;
+    height: 8rem;
+    overflow: visible;
+  }
+
+  #main-pic {
+    top: -85%;
+    right: 50%;
+    transform: translateX(50%);
+    width: 15rem;
+    height: auto;
+  }
+
+  #box {
+    width: 6rem;
+    left: 12%;
+    top: -30%;
+  }
+
+  /* FAQ Section */
+  h1 {
+    text-align: center;
+  }
+
+  .questions {
+    width: 86%;
+    margin-left: 7%;
+  }
+
+  #faq-section {
+    margin: 0 0 3rem;
+  }
+}
+}
